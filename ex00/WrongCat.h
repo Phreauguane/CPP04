@@ -1,3 +1,5 @@
+#pragma once
+
 #include "WrongAnimal.h"
 
 class WrongCat : public WrongAnimal
