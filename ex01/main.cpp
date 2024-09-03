@@ -1,8 +1,6 @@
 #include "Animal.h"
 #include "Cat.h"
 #include "Dog.h"
-#include "WrongAnimal.h"
-#include "WrongCat.h"
 
 int main( void )
 {
@@ -18,17 +16,7 @@ int main( void )
 	animal->makeSound(); //will output the animal sound
 
 	std::cout << std::endl;
-	const WrongAnimal* wrong_animal = new WrongAnimal();
-	const WrongAnimal* wrong_cat = new WrongCat();
-
-	std::cout << std::endl;
-	wrong_cat->makeSound();
-	wrong_animal->makeSound();
-
-	std::cout << std::endl;
 	delete animal;
 	delete dog;
 	delete cat;
-	delete wrong_cat;
-	delete wrong_animal;
 }
