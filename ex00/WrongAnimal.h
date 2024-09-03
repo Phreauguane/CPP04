@@ -5,17 +5,17 @@
 
 #define cout(x) std::cout << x << std::endl
 
-class Animal
+class WrongAnimal
 {
 protected:
 	std::string type;
 public:
-	Animal();
-	Animal(const Animal&);
-	Animal& operator=(const Animal&);
+	WrongAnimal();
+	WrongAnimal(const WrongAnimal&);
+	WrongAnimal& operator=(const WrongAnimal&);
 
-	virtual void makeSound() const;
+	void makeSound() const;
 	std::string getType() const;
 
-	virtual ~Animal();
+	virtual ~WrongAnimal();
 };

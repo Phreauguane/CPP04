@@ -19,12 +19,12 @@ Animal& Animal::operator=(const Animal& copy)
 	return *this;
 }
 
-void Animal::makeSound()
+void Animal::makeSound() const
 {
 	cout("* animal sound *");
 }
 
-std::string& Animal::getType()
+std::string Animal::getType() const
 {
 	return type;
 }
