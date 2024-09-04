@@ -4,19 +4,37 @@
 
 int main( void )
 {
-	const Animal* animal = new Animal();
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
+	cout("");
+	Animal* animal = new Animal();
+	Animal* dog = new Dog();
+	Animal* cat = new Cat();
 
-	std::cout << std::endl;
+	cout("");
 	std::cout << "Dog->getType [" << dog->getType() << "] " << std::endl;
 	std::cout << "Cat->getType [" << cat->getType() << "] " << std::endl;
 	cat->makeSound(); //will output the cat sound! (not the Animal)
 	dog->makeSound(); //will output the dog sound! (not the Animal)
 	animal->makeSound(); //will output the animal sound
+	
+	cout("");
+	Dog d1;
+	Dog d2(d1);
 
-	std::cout << std::endl;
+	cout("");
+	cout("d1.getBrain : " << d1.getBrain());
+	cout("d2.getBrain : " << d2.getBrain());
+
+	cout("");
+	Cat c1;
+	Cat c2(c1);
+
+	cout("");
+	cout("c1.getBrain : " << c1.getBrain());
+	cout("c2.getBrain : " << c2.getBrain());
+
+	cout("");
 	delete animal;
 	delete dog;
 	delete cat;
+	cout("");
 }

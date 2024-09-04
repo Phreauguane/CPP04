@@ -1,6 +1,6 @@
 NAME	=	animals
 
-CPP		=	c++ -Wall -Wextra -Werror -std=c++98
+CPP		=	c++ -Wall -Wextra -Werror -std=c++98 -g2
 
 SRC		=	main.cpp		\
 			Animal.cpp		\
