@@ -2,8 +2,8 @@
 
 Dog::Dog() : Animal()
 {
-	type = "Dog";
 	cout("Dog constructor called");
+	type = "Dog";
 }
 
 Dog::Dog(const Dog& copy) : Animal(copy)
@@ -13,8 +13,8 @@ Dog::Dog(const Dog& copy) : Animal(copy)
 
 Dog& Dog::operator=(const Dog& copy)
 {
-	type = copy.type;
 	cout("Dog assignment operator called");
+	type = copy.type;
 	return *this;
 }
 

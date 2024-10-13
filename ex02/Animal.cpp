@@ -2,20 +2,20 @@
 
 Animal::Animal()
 {
-	type = "Animal";
 	cout("Animal constructor called");
+	type = "Animal";
 }
 
 Animal::Animal(const Animal& copy)
 {
-	*this = copy;
 	cout("Animal copy constructor called");
+	*this = copy;
 }
 
 Animal& Animal::operator=(const Animal& copy)
 {
-	type = copy.type;
 	cout("Animal assignment operator called");
+	type = copy.type;
 	return *this;
 }
 

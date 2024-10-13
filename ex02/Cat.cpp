@@ -2,24 +2,24 @@
 
 Cat::Cat() : Animal()
 {
+	cout("Cat constructor called");
 	type = "Cat";
 	brain = new Brain();
-	cout("Cat constructor called");
 }
 
 Cat::Cat(const Cat& copy) : Animal(copy)
 {
+	cout("Cat copy constructor called");
 	brain = new Brain();
 	*this = copy;
-	cout("Cat copy constructor called");
 }
 
 Cat& Cat::operator=(const Cat& copy)
 {
+	cout("Cat assignment operator called");
 	type = copy.type;
 	delete brain;
 	brain = new Brain(*(copy.brain));
-	cout("Cat assignment operator called");
 	return *this;
 }
 
@@ -35,6 +35,6 @@ Brain* Cat::getBrain() const
 
 Cat::~Cat()
 {
-	delete brain;
 	cout("Cat destructor called");
+	delete brain;
 }

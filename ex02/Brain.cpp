@@ -2,30 +2,30 @@
 
 Brain::Brain()
 {
-	ideas = new std::string[100];
 	cout("Brain constructor called");
+	ideas = new std::string[100];
 }
 
 Brain::Brain(const Brain& copy)
 {
+	cout("Brain copy constructor called");
 	ideas = new std::string[100];
 	*this = copy;
-	cout("Brain copy constructor called");
 }
 
 Brain& Brain::operator=(const Brain& copy)
 {
+	cout("Brain assignment operator called");
 	for (int i = 0; i < 100; i++)
 	{
 		ideas[i] = copy.ideas[i];
 	}
-	cout("Brain assignment operator called");
 
 	return *this;	
 }
 
 Brain::~Brain()
 {
-	delete [] ideas;
 	cout("Brain destructor called");
+	delete [] ideas;
 }

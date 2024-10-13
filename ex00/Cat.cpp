@@ -2,8 +2,8 @@
 
 Cat::Cat() : Animal()
 {
-	type = "Cat";
 	cout("Cat constructor called");
+	type = "Cat";
 }
 
 Cat::Cat(const Cat& copy) : Animal(copy)
@@ -13,8 +13,8 @@ Cat::Cat(const Cat& copy) : Animal(copy)
 
 Cat& Cat::operator=(const Cat& copy)
 {
-	type = copy.type;
 	cout("Cat assignment operator called");
+	type = copy.type;
 	return *this;
 }
 

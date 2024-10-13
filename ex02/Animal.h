@@ -3,7 +3,7 @@
 #include <string>
 #include <iostream>
 
-#define cout(x) std::cout << x << std::endl
+#define cout(x) std::cout << "\033[39m\033[49m" << x << std::endl
 
 class Animal
 {
@@ -14,7 +14,7 @@ protected:
 public:
 	Animal& operator=(const Animal&);
 
-	virtual void makeSound() const;
+	virtual void makeSound() const = 0;
 	std::string getType() const;
 
 	virtual ~Animal();

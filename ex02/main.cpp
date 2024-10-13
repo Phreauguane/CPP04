@@ -5,7 +5,7 @@
 int main( void )
 {
 	cout("");
-	// Animal* animal = new Animal(); doesn't work because constructors are now protected
+	// Animal* animal = new Animal(); doesn't compile
 	Animal* dog = new Dog();
 	Animal* cat = new Cat();
 
@@ -14,7 +14,6 @@ int main( void )
 	std::cout << "Cat->getType [" << cat->getType() << "] " << std::endl;
 	cat->makeSound(); //will output the cat sound! (not the Animal)
 	dog->makeSound(); //will output the dog sound! (not the Animal)
-	// animal->makeSound(); //will output the animal sound
 	
 	cout("");
 	Dog d1;
@@ -33,7 +32,6 @@ int main( void )
 	cout("c2.getBrain : " << c2.getBrain());
 
 	cout("");
-	// delete animal;
 	delete dog;
 	delete cat;
 	cout("");

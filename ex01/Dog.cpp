@@ -2,24 +2,24 @@
 
 Dog::Dog() : Animal()
 {
+	cout("Dog constructor called");
 	type = "Dog";
 	brain = new Brain();
-	cout("Dog constructor called");
 }
 
 Dog::Dog(const Dog& copy) : Animal()
 {
+	cout("Dog copy constructor called");
 	brain = new Brain();
 	*this = copy;
-	cout("Dog copy constructor called");
 }
 
 Dog& Dog::operator=(const Dog& copy)
 {
+	cout("Dog assignment operator called");
 	type = copy.type;
 	delete brain;
 	brain = new Brain(*(copy.brain));
-	cout("Dog assignment operator called");
 	return *this;
 }
 
@@ -35,6 +35,6 @@ Brain* Dog::getBrain() const
 
 Dog::~Dog()
 {
-	delete brain;
 	cout("Dog destructor called");
+	delete brain;
 }

@@ -13,6 +13,7 @@ int main( void )
 	std::cout << std::endl;
 	std::cout << "Dog->getType [" << dog->getType() << "] " << std::endl;
 	std::cout << "Cat->getType [" << cat->getType() << "] " << std::endl;
+	std::cout << "Animal->getType [" << animal->getType() << "] " << std::endl;
 	cat->makeSound(); //will output the cat sound! (not the Animal)
 	dog->makeSound(); //will output the dog sound! (not the Animal)
 	animal->makeSound(); //will output the animal sound
